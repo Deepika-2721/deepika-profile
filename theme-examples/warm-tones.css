@@ -1,0 +1,30 @@
+/* Third theme exercise: warm tones.
+   Copy these :root values into css/theme.css on branch theme/warm-tones. */
+:root {
+  color-scheme: light;
+  --color-primary: #514036;
+  --color-primary-light: #94745b;
+  --color-primary-dark: #35271f;
+  --color-bg: #fbf4e9;
+  --color-bg-secondary: #f1e4d2;
+  --color-bg-card: #fffaf3;
+  --color-text: #43352d;
+  --color-text-secondary: #78685d;
+  --color-text-inverse: #fffaf3;
+  --color-accent: #b56e45;
+  --color-accent-soft: #ead0b7;
+  --color-border: #e2d1bf;
+  --color-shadow: rgba(62, 43, 29, 0.12);
+  --font-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-size-base: 16px;
+  --font-size-h1: clamp(2.7rem, 7vw, 5.8rem);
+  --font-size-h2: clamp(2rem, 4vw, 3rem);
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  --max-width: 1160px;
+  --border-radius: 18px;
+  --transition-speed: 0.35s;
+}

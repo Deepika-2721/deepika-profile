@@ -1,0 +1,1 @@
+Add your family group photo and optional individual family photos in this folder. Update index.html when you add them.

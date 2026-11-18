@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#160d2b"/><stop offset=".52" stop-color="#71345f"/><stop offset="1" stop-color="#e2a85e"/></linearGradient><linearGradient id="disc"><stop stop-color="#f7d18a"/><stop offset="1" stop-color="#e66d82"/></linearGradient></defs>
+<rect width="900" height="620" fill="url(#bg)"/><circle cx="690" cy="180" r="180" fill="#f5c77d" opacity=".13"/><circle cx="690" cy="180" r="125" fill="none" stroke="#f8dca7" stroke-width="3" opacity=".65"/><circle cx="690" cy="180" r="82" fill="none" stroke="#f8dca7" stroke-width="2" opacity=".55"/><circle cx="690" cy="180" r="12" fill="#f8dca7"/>
+<g fill="none" stroke="#f9dca8" stroke-width="7" stroke-linecap="round"><path d="M160 190v210m0-210 145-45v210"/><path d="M160 400c-28 28-76 22-78-9-2-27 36-46 78-31m145-15c-28 28-76 22-78-9-2-27 36-46 78-31"/></g>
+<text x="70" y="500" fill="#fff4df" font-family="Georgia,serif" font-size="58">MUSIC, IN EVERY</text><text x="70" y="565" fill="#f4c77c" font-family="Georgia,serif" font-style="italic" font-size="58">language &amp; mood</text>
+<text x="72" y="90" fill="#ffe2ad" font-family="Arial,sans-serif" letter-spacing="8" font-size="22">TAMIL  •  ENGLISH  •  HINDI</text></svg>

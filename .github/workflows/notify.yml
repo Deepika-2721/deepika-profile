@@ -1,0 +1,29 @@
+name: Deployment Notification
+
+on:
+  workflow_run:
+    workflows: ["Deploy to GitHub Pages"]
+    types: [completed]
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify deployment result in Slack
+        if: ${{ secrets.SLACK_WEBHOOK_URL != '' }}
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          DEPLOYMENT_RESULT: ${{ github.event.workflow_run.conclusion }}
+          REPOSITORY: ${{ github.repository }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+        run: |
+          curl --fail --silent --show-error -X POST \
+            -H 'Content-type: application/json' \
+            --data "{\"text\":\"GitHub Pages deployment for ${REPOSITORY}: ${DEPLOYMENT_RESULT}. Details: ${RUN_URL}\"}" \
+            "$SLACK_WEBHOOK_URL"
+      - name: Explain skipped notification
+        if: ${{ secrets.SLACK_WEBHOOK_URL == '' }}
+        run: echo "Slack notification skipped. Add SLACK_WEBHOOK_URL in repository Actions secrets to enable it."
