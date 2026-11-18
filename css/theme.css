@@ -1,17 +1,47 @@
 
+/* Theme tokens: one palette, tuned for both modes. */
+:root {
+    color-scheme: light;
+    --bg: #f5f1eb;
+    --surface: #fffdfa;
+    --surface-2: #eee8df;
+    --text: #202b3a;
+    --muted: #687487;
+    --accent: #b58a4b;
+    --accent-2: #d8bd8d;
+    --line: rgba(32,43,58,.13);
+    --header: rgba(250,248,244,.88);
+    --shadow: 0 24px 70px rgba(37,32,25,.10);
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #151922;
+    --surface: #1d2430;
+    --surface-2: #252e3b;
+    --text: #f3eee6;
+    --muted: #b6bdc8;
+    --accent: #d9b779;
+    --accent-2: #f0d8a9;
+    --line: rgba(243,238,230,.14);
+    --header: rgba(21,25,34,.88);
+    --shadow: 0 24px 70px rgba(0,0,0,.28);
+}
+
 * {
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body {
+    margin: 0;
     background: var(--bg);
     color: var(--text);
     font-family: "DM Sans", sans-serif;
-    margin: 0;
     transition: background .45s, color .45s;
 }
 
