@@ -1,3 +1,4 @@
+
 name: Validate HTML & CSS
 
 on:
@@ -9,18 +10,22 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+
       - name: Install validation tools
         run: |
-          npm install -g htmlhint
-          npm install -g csslint
+          npm install -g htmlhint prettier
+
       - name: Validate HTML
         run: htmlhint "index.html" --config .htmlhintrc
+
       - name: Validate CSS
-        run: csslint --quiet css/*.css
+        run: prettier --parser css "css/*.css" > /dev/null
